@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello vue.js</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+
+	<div id="app">
+	  {{ message }}
+	</div>
+
+	<div id="app-2">
+		<span v-bind:title="message">
+			test , hold your mouse here to see hiding messages
+	 	</span>
+	</div>
+
+
+	<script>
+	 	var vm = new Vue({
+	    el: '#app',
+	    data: {
+	    	message: 'Hello Vue'
+	    }
+	  });
+	 	var app2 = new Vue({
+			el: '#app-2',
+			data: {
+   				message: '页面加载于 ' + new Date().toLocaleString()
+			}
+		});
+	</script>
+</body>
+</html>
